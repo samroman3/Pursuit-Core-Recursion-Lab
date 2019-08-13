@@ -80,3 +80,4 @@ Source: CTCI
 
 # Resources
 - [JavaScript Recursion Exercises](http://www.w3resource.com/javascript-exercises/javascript-recursion-functions-exercises.php)
+- [Swift Recursion Exercises](https://www.weheartswift.com/recursion/)
