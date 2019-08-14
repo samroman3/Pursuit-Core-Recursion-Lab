@@ -131,6 +131,17 @@ tripleStep(3); //returns 4
 tripleStep(4); //returns 7
 tripleStep(5); //returns 13
 tripleStep(10); //returns 274
+
+func tripleStep(n: Int) -> Int {
+if n == 1 || n == 0 { return 1 }
+else if n == 2 { return 2 }
+return tripleStep(n: n - 3) + tripleStep(n: n - 2) + tripleStep(n: n - 1)
+//2                     //3                     //4
+//1                     //0                     //3
+}
+
+
+tripleStep(n: 5)
 ```
 
 Source: Cracking the Coding Interview
