@@ -9,7 +9,30 @@ input: 6
 output: 21
 
 //21 = 6 + 5 + 4 + 3 + 2 + 1
+
+
+func iterativeSumOfAll(n: Int) -> Int {
+var sum = 0
+
+for i in 0...n{
+sum += i
+print(i)
+}
+return sum
+}
+
+iterativeSumOfAll(n: 6)
+
+func recursiveSumOfAll(n: Int) -> Int {
+//base call
+if n == 1 {return 1}
+return n + recursiveSumOfAll(n: n - 1)
+}
+
+recursiveSumOfAll(n: 6)
+
 ```
+
 
 
 - ### Multiply array
@@ -19,6 +42,18 @@ Write a function called `multArr` that takes in an array of numbers as an argume
 ```js
 multArr([2, 3, 5]); // returns 30
 multArr([5, 5, 1, 2]); //returns 50
+
+
+
+func multArr(arr: [Int], index: Int) -> Int {
+// base case
+if index == arr.count  { return 1 }
+return arr[index] * multArr(arr: arr, index: index + 1)
+
+}
+
+multArr(arr: [2,3,5], index: 0)
+
 ```
 
 - ### Concatenate array
